@@ -16,11 +16,20 @@ int max_of_four(int a, int b, int c, int d){
   return max_value;
 }
 
+int max_of_four_improved(int a, int b, int c, int d){
+  int e = a > b ? a : b;
+  int f = c > d ? c : b;
+  return (e > f ? e : f);
+}
+
 int main() {
   int a, b, c, d;
+  printf("Enter four numbers: \n");
   scanf("%d %d %d %d", &a, &b, &c, &d);
   int ans = max_of_four(a, b, c, d);
-  printf("%d", ans);
+  printf("Their max is: %d\n", ans);
+  int ans2 = max_of_four_improved(a, b, c, d);
+  printf("Their max is: %d\n", ans);
                     
   return 0;
 }
