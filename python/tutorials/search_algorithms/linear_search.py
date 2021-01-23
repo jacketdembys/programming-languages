@@ -5,16 +5,33 @@ Author: Jacket Demby's / University of Missouri-Columbia
 
 import numpy as np
 
+# function for linear search
+def linear_search(search_array, search_number):
 
-search_array = [10,14,19,26,27,31,33,35,42,44]
-search_number = 33
+    print()
+    print("Linear search in progress ...")
+    print("Input array is:", search_array)
+    print("Search item is:", search_number)
+    print()
+    print_separate_line(50)
+    comparisons = 0
+    
+    for item in search_array:
+        comparisons += 1
+        if item == search_number:
+            print("search item", item,"found at index", search_array.index(item))
+            print("Number of comparisons made:", comparisons)
+
+# function to print a separating line
+def print_separate_line(count, motif="*"):
+    if motif == "*":
+        for i in range(count):
+            print("*", end=" ")
+        print("\n")
 
 
-print()
-print("Linear search in progress ...")
-print("Search item is:", search_number)
-print()
-
-for item in search_array:
-    if item == search_number:
-        print("search item", item,"found at index", search_array.index(item))
+# main function
+if __name__ == "__main__":
+    search_array = [10,14,19,26,27,31,33,35,42,44]
+    search_number = 33
+    linear_search(search_array, search_number)
