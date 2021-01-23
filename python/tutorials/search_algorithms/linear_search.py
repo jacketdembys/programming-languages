@@ -4,6 +4,8 @@ Author: Jacket Demby's / University of Missouri-Columbia
 Date: 01/22/2021
 """
 
+from search_functions import *
+
 # function for linear search
 def linear_search(search_array, search_number):
 
@@ -21,16 +23,8 @@ def linear_search(search_array, search_number):
             print("search item", item,"found at index", search_array.index(item))
             print("Number of comparisons made:", comparisons)
 
-# function to print a separating line
-def print_separate_line(count, motif="*"):
-    if motif == "*":
-        for i in range(count):
-            print("*", end=" ")
-        print("\n")
-
-
 # main function
 if __name__ == "__main__":
     search_array = [10,14,19,26,27,31,33,35,42,44]
-    search_number = 33
+    search_number = 26
     linear_search(search_array, search_number)
