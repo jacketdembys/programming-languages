@@ -27,7 +27,7 @@ def interpolation_search(search_array, search_number):
     num_elements = len(search_array_sorted)
     lower_bound = 0
     upper_bound = num_elements-1
-    print(search_array_sorted)
+    #print(search_array_sorted)
 
     if upper_bound < lower_bound or search_number not in search_array_sorted:
         print("Search item does not exist in search array")
@@ -37,7 +37,7 @@ def interpolation_search(search_array, search_number):
         comparisons += 1
         
         mid_point = int(lower_bound + ((upper_bound - lower_bound)/(search_array_sorted[upper_bound]-search_array_sorted[lower_bound]))*(search_number - search_array_sorted[lower_bound]))
-        print(mid_point, i)
+        #print(mid_point, i)
 
         if search_array_sorted[mid_point] == search_number:
             print("search item", search_array_sorted[mid_point],"found at index", search_array.index(search_array_sorted[mid_point]))
