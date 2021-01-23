@@ -1,9 +1,8 @@
 """
 Implementations of linear search in Python
 Author: Jacket Demby's / University of Missouri-Columbia
+Date: 01/22/2021
 """
-
-import numpy as np
 
 # function for linear search
 def linear_search(search_array, search_number):
